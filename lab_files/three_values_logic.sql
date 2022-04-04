@@ -1,7 +1,9 @@
 
-# Three values true, false, unknown
+# 
+SELECT Null+Null AS RESULT;
+#Three values true, false, unknown
 # Any comparison with null returns unknown(Null)
-SELECT NULL = 1;
+SELECT Null = 0;
 SELECT NULL <> 1;
 
 SELECT NULL > 1;
