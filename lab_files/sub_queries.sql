@@ -8,13 +8,26 @@ from r1, r2, ..., rm
 where P;
 
 -- set membership (in, not in)
-select distinct course_id   -- for each row Section(course_id)
+select  course_id   -- for each row Section(course_id)
 from section                -- from table sections
 -- check
 where semester = 'Fall' and year= 2009 and  
 -- set membership "course_id is subset of..."
 course_id in (select course_id from section where semester = 'Spring' and year= 2010);
 
+
+
+
+
+
+
+
+
+
+
+
+select course_id from section where course_id in(
+select course_id from section where semester = 'Spring' and year= 2010;)
 select distinct course_id 
 from section 
 where semester = 'Fall' and year= 2009 and course_id  
@@ -95,3 +108,24 @@ from
 (select dept_name, avg (salary) from instructor  group by dept_name) as 
 dept_avg (dept_name, avg_salary)  --dept_avg(dept_name,avg_salary)
 where avg_salary > 42000;
+
+
+
+
+
+
+
+select course_id from section where semester='fall';
+
+
+
+
+
+
+
+
+
+
+
+
+
